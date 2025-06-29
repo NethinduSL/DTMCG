@@ -42,6 +42,8 @@ const teachers = {
   BPLA: { name: "B. P. Lamahewa", subjects: "Mathematics", img: "Image/BPLA.png" },
   BDSE: { name: "B. D. Senanayeka", subjects: "Mathematics", img: "Image/BDSE.JPG" },
   GISA: { name: "G. Iresha Sanjeewani", subjects: "Mathematics", img: "Image/GISA.JPG" },
+  NMHS: { name: "N.M.U.S.K. Nawarathne", subjects: "Mathematics", img: "Image/NMHS.JPG" },
+
 
   // Buddhism
   KSRI: { name: "K. Sirisumana", subjects: "Buddhism, Buddhism Tutorial Sciences", img: "Image/KSRI.png" },
