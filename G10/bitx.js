@@ -1,3 +1,4 @@
+// Dark mode toggle
 document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("hi2");
 
@@ -14,9 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-
-
-
+// Main function to update class data
 async function updateClassData() {
     const now = new Date();
     const sriLankaTime = now.toLocaleString("en-US", { timeZone: "Asia/Colombo" });
@@ -31,15 +30,54 @@ async function updateClassData() {
     const teacherDataForDay = teacherDataByDay[currentDay] || {};
     const reliefDataForDay = reliefData[currentDay] || {};
 
-    const classKeys = ['classA', 'classB', 'classC', 'classD', 'classE', 'classF'];
+    // Find current period first
+    let currentPeriod = null;
+    periodTimings.forEach(period => {
+        if (currentTime >= period.start && currentTime < period.end) {
+            currentPeriod = period;
+        }
+    });
 
-    classKeys.forEach(classKey => {
-        periodTimings.forEach(period => {
-            if (currentTime >= period.start && currentTime < period.end) {
-                handleClassPeriod(classKey, period, teacherDataForDay, reliefDataForDay);
+    if (currentPeriod) {
+        document.getElementById("Rak").textContent = currentPeriod.id;
+        console.log(`Current period: ${currentPeriod.id}, Time: ${currentTime}`);
+        
+        // Check if any class has an optional subject in this period
+        const classKeys = ['classA', 'classB', 'classC', 'classD', 'classE', 'classF'];
+        let optionalSubject = null;
+        
+        // First, check what subjects each class has for this period
+        classKeys.forEach(classKey => {
+            const reliefTeacherId = reliefDataForDay[classKey]?.[currentPeriod.id];
+            const teacherId = reliefTeacherId || teacherDataForDay[classKey]?.[currentPeriod.id];
+            console.log(`${classKey} - ${currentPeriod.id}: ${teacherId}`);
+            
+            if (teacherId && teacherId.startsWith("OPT")) {
+                optionalSubject = teacherId;
             }
         });
-    });
+
+        // Handle the period based on what we found
+        if (currentPeriod.id === "period5") {
+            console.log("Interval period detected");
+            handleInterval();
+        } else if (optionalSubject) {
+            console.log(`Optional subject detected: ${optionalSubject}`);
+            // First handle all regular classes
+            classKeys.forEach(classKey => {
+                handleClassPeriod(classKey, currentPeriod, teacherDataForDay, reliefDataForDay);
+            });
+            // Then handle the optional subjects (this will hide/show appropriate classes)
+            handleOptionalSubjects(optionalSubject, null, currentPeriod.id);
+        } else {
+            // Regular period - handle each class individually
+            classKeys.forEach(classKey => {
+                handleClassPeriod(classKey, currentPeriod, teacherDataForDay, reliefDataForDay);
+            });
+            // Make sure optional subjects are hidden in regular periods
+            handleOptionalSubjects(null, null, currentPeriod.id);
+        }
+    }
 }
 
 function handleClassPeriod(classKey, period, teacherDataForDay, reliefDataForDay) {
@@ -49,21 +87,15 @@ function handleClassPeriod(classKey, period, teacherDataForDay, reliefDataForDay
     const imgId = `img${classKey.charAt(5).toUpperCase()}`;
     const nameId = `name${classKey.charAt(5).toUpperCase()}`;
     const subjectId = `subject${classKey.charAt(5).toUpperCase()}`;
-    
-    document.getElementById("Rak").textContent = period.id;
 
     if (teacherId && teachers[teacherId]) {
         const teacher = teachers[teacherId];
         loadTeacherImage(teacher, imgId, nameId, subjectId);
     } else if (reliefTeacherId) {
         setReliefTeacher(imgId, nameId, subjectId);
-    } else if (period.id === "period5") {
-        handleInterval(imgId, nameId, subjectId);
     } else {
         setDefaultClassInfo(classKey, imgId, nameId, subjectId);
     }
-
-    handleOptionalSubjects(teacherId, classKey, period.id);
 }
 
 function loadTeacherImage(teacher, imgId, nameId, subjectId) {
@@ -85,26 +117,55 @@ function setReliefTeacher(imgId, nameId, subjectId) {
     document.getElementById(subjectId).textContent = "Relief";
 }
 
-function handleInterval(imgId, nameId, subjectId) {
-    document.getElementById(imgId).src = "https://placehold.co/600x400?text=Interval";
-    document.getElementById(nameId).textContent = "Interval";
-    document.getElementById(subjectId).textContent = "";
+/**
+ * Handles the interval period (period5) by hiding all class and optional subject elements,
+ * and showing only the interval elements.
+ */
+function handleInterval() {
+    // IDs of class and optional subject elements to hide during interval
+    const classesToHide = [
+        "classA", "classB", "classC", "classD", "classE", "classF",
+        "opta", "optb", "optc", "opta2", "optb2", "optc2"
+    ];
+    hideElementsByIds(classesToHide);
 
-    hideClasses(['classA', 'classB', 'classC', 'classD', 'classE', 'classF']);
-    showIntervalClasses(['int', 'int2', 'int3']);
+    // IDs of interval elements to show during interval
+    const intervalElementsToShow = ["int1", "int2", "int3"];
+    showElementsByIds(intervalElementsToShow);
 }
 
-function hideClasses(classIds) {
-    classIds.forEach(classId => {
-        document.getElementById(classId).classList.add("hide");
+/**
+ * Adds the 'hide' class to elements with the given IDs to hide them.
+ * @param {string[]} elementIds - Array of element IDs to hide.
+ */
+function hideElementsByIds(elementIds) {
+    elementIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            console.log(`Hiding element with id: ${id}`);
+            el.classList.add("hide");
+            el.classList.remove("square");
+            // Also hide all child elements inside this element
+            Array.from(el.children).forEach(child => {
+                child.classList.add("hide");
+            });
+        } else {
+            console.log(`Element with id: ${id} not found`);
+        }
     });
 }
 
-function showIntervalClasses(intervalIds) {
-    intervalIds.forEach(intervalId => {
-        const element = document.getElementById(intervalId);
-        element.classList.remove("hide");
-        element.classList.add("square");
+/**
+ * Removes the 'hide' class and adds the 'square' class to elements with the given IDs to show them.
+ * @param {string[]} elementIds - Array of element IDs to show.
+ */
+function showElementsByIds(elementIds) {
+    elementIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.classList.remove("hide");
+            el.classList.add("square");
+        }
     });
 }
 
