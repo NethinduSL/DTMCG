@@ -30,6 +30,7 @@ body {
 /* Dark mode styles */
 .dark-mode {
     background: var(--bg-dark) no-repeat center center fixed;
+    background-size: cover; /* Added this line to ensure consistent sizing */
     background-color: var(--bg-color-dark);
     color: var(--text-dark);
 }
