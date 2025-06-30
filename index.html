@@ -217,6 +217,7 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             border-color: rgba(255, 204, 0, 0.3);
         }
+
         .grade-number11 {
             font-size: 48px;
             font-weight: 600;
@@ -233,7 +234,6 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
-        
         .grade-number9 {
             font-size: 48px;
             font-weight: 600;
@@ -241,9 +241,6 @@
             color: #42bd58;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-
-        
- 
 
         .grade-title {
             font-size: 20px;
@@ -255,6 +252,144 @@
             font-size: 14px;
             opacity: 0.7;
             line-height: 1.4;
+        }
+
+        /* Credits Section */
+        .credits-section {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 80px;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: clamp(24px, 3vw, 36px);
+            font-weight: 600;
+            margin-bottom: 40px;
+            color: var(--accent-color);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .principals-section {
+            margin-bottom: 60px;
+        }
+
+        .principals-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .creators-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .person-card {
+            background: var(--card-light);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dark-mode .person-card {
+            background: var(--card-dark);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .person-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            border-color: rgba(255, 204, 0, 0.4);
+        }
+
+        .dark-mode .person-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .person-image {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+            position: relative;
+        }
+
+        .person-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .person-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #000;
+        }
+
+        .person-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: inherit;
+        }
+
+        .person-title {
+            font-size: 14px;
+            opacity: 0.7;
+            color: var(--accent-color);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--nav-light);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 204, 0, 0.2);
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .dark-mode .footer {
+            background: var(--nav-dark);
+            border-top: 1px solid rgba(255, 204, 0, 0.15);
+        }
+
+        .footer-text {
+            font-size: 14px;
+            opacity: 0.7;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         /* Responsive Design */
@@ -279,12 +414,36 @@
                 max-width: 400px;
             }
 
+            .principals-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .creators-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
             .main-content {
                 padding: 40px 15px;
             }
 
             .welcome-section {
                 margin-bottom: 40px;
+            }
+
+            .credits-section {
+                margin-top: 40px;
+                padding: 40px 15px;
+            }
+
+            .person-image {
+                width: 80px;
+                height: 80px;
+            }
+
+            .image-placeholder {
+                font-size: 28px;
             }
         }
 
@@ -298,8 +457,25 @@
                 padding: 30px 20px;
             }
 
-            .grade-number {
+            .grade-number9, .grade-number10, .grade-number11 {
                 font-size: 36px;
+            }
+
+            .creators-container {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .person-card {
+                padding: 20px 15px;
+            }
+        }
+
+        /* Ripple Animation */
+        @keyframes ripple {
+            to {
+                transform: scale(2);
+                opacity: 0;
             }
         }
     </style>
@@ -312,7 +488,7 @@
                 <div class="logo">🎓</div>
                 <h1 class="site-title">DTMC</h1>
             </div>
-            <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+            <button class="toggle-btn" onclick="toggleDarkMode()">🌙 </button>
         </div>
     </nav>
 
@@ -320,7 +496,7 @@
     <main class="main-content">
         <div class="welcome-section">
             <h2 class="welcome-title">Welcome to DTMC</h2>
-            <p class="welcome-subtitle">Select your grade to access Daily Time tables Mahinda Collage</p>
+            <p class="welcome-subtitle">Select your grade to access Daily Time tables Mahinda College</p>
         </div>
 
         <div class="grade-container">
@@ -342,7 +518,95 @@
                 <p class="grade-desc">Time table of grade 11 classes</p>
             </a>
         </div>
+
+        <!-- Principals and Creators Section -->
+        <div class="credits-section">
+            <!-- School Principals Section -->
+            <div class="principals-section">
+                <h2 class="section-title">School Leadership</h2>
+                <div class="principals-container">
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="principal1.png" alt="Principal 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">👨‍🎓</div>
+                        </div>
+                        <h3 class="person-name">Principal Name 1</h3>
+                        <p class="person-title">Vise Principal</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="principal2.png" alt="Principal 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">👨‍🎓</div>
+                        </div>
+                        <h3 class="person-name">Principal Name 2</h3>
+                        <p class="person-title">Vice Principal</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="Principal.png" alt="Principal 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">👨‍🎓</div>
+                        </div>
+                        <h3 class="person-name">Mr.Janaka Peduruhewa</h3>
+                        <p class="person-title"> Principal</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="principal4.png" alt="Principal 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">👨‍🎓</div>
+                        </div>
+                        <h3 class="person-name">Principal Name 3</h3>
+                        <p class="person-title">Deputy Principal</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="principal5.png" alt="Principal 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">👨‍🎓</div>
+                        </div>
+                        <h3 class="person-name">Mr.Harshana Nallaperuma</h3>
+                        <p class="person-title">Deputy Principal/MIC</p>
+                    </div>
+                </div>
+            </div>
+        <!-- Student Creators Section -->
+            <div class="creators-section">
+                <h3 class="section-title">Mahinda College Students</h3>
+                <div class="creators-container">
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="creator1.png" alt="Creator 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">👨‍💻</div>
+                        </div>
+                        <h3 class="person-name">K.K.Nethindu Thaminda</h3>
+                        <p class="person-title">Lead Developer</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="creator2.png" alt="Creator 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">👨‍💻</div>
+                        </div>
+                        <h3 class="person-name">Y.Rakmitha Samaraweerarachchi</h3>
+                        <p class="person-title">Technical Support</p>
+                    </div>
+                    <div class="person-card">
+                        <div class="person-image">
+                            <img src="creator3.png" alt="Creator 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="image-placeholder">🎨</div>
+                        </div>
+                        <h3 class="person-name">D.M.Thisum Jalitha</h3>
+                        <p class="person-title">Junior Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>© 2025 DTMC - Daily Time Tables Mahinda College</p>
+            <p>Developed with by Mahinda College Students</p>
+        </div>
+    </footer>
 
     <script>
         function toggleDarkMode() {
@@ -352,115 +616,64 @@
             body.classList.toggle('dark-mode');
             
             if (body.classList.contains('dark-mode')) {
-                toggleBtn.innerHTML = '☀️ Light Mode';
-                localStorage.setItem('darkMode', 'enabled');
+                toggleBtn.innerHTML = '☀️';
             } else {
-                toggleBtn.innerHTML = '🌙 Dark Mode';
-                localStorage.setItem('darkMode', 'disabled');
+                toggleBtn.innerHTML = '🌙';
             }
         }
 
         function navigateToGrade(grade) {
-    // Grade page URLs
-    const gradeUrls = {
-        9: 'G9/index.html',
-        10: 'G10/inddex.html',
-        11: 'G11/index.html'
-    };
-    
-    // Check if grade exists
-    if (gradeUrls[grade]) {
-        console.log(`Navigating to Grade ${grade}...`);
-        
-        // Show loading message
-        const loadingMsg = document.createElement('div');
-        loadingMsg.innerHTML = `
-            <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
-                        background: rgba(0,0,0,0.8); color: white; padding: 20px; 
-                        border-radius: 10px; z-index: 9999;">
-                <div style="text-align: center;">
-                    <div style="border: 4px solid #f3f3f3; border-top: 4px solid #3498db; 
-                                border-radius: 50%; width: 40px; height: 40px; 
-                                animation: spin 1s linear infinite; margin: 0 auto 10px;"></div>
-                    <p>Loading Grade ${grade} Timetable...</p>
-                </div>
-            </div>
-            <style>
-                @keyframes spin {
-                    0% { transform: rotate(0deg); }
-                    100% { transform: rotate(360deg); }
-                }
-            </style>
-        `;
-        document.body.appendChild(loadingMsg);
-        
-        // Auto redirect after 1 second
-        setTimeout(() => {
-            window.location.href = gradeUrls[grade];
-        }, 1000);
-        
-    } else {
-        // Error handling for invalid grade
-        alert(`Grade ${grade} not found! Available grades: 9, 10, 11`);
-        console.error(`Invalid grade: ${grade}`);
-    }
-}
-
-// Alternative instant navigation (no delay)
-function navigateToGradeInstant(grade) {
-    const gradeUrls = {
-        9: 'G9/index.html',
-        10: 'G10/index.html',
-        11: 'G11/index.html'
-    };
-    
-    if (gradeUrls[grade]) {
-        console.log(`Navigating to Grade ${grade}...`);
-        window.location.href = gradeUrls[grade];
-    } else {
-        alert(`Grade ${grade} not available!`);
-    }
-}
-
-// Auto-redirect with error handling
-function navigateToGradeWithErrorHandling(grade) {
-    const gradeUrls = {
-        9: 'G9/index.html',
-        10: 'G10/index.html',
-        11: 'G11/index.html'
-    };
-    
-    if (gradeUrls[grade]) {
-        console.log(`Navigating to Grade ${grade}...`);
-        
-        // Check if page exists before navigating
-        fetch(gradeUrls[grade], { method: 'HEAD' })
-            .then(response => {
-                if (response.ok) {
+            // Grade page URLs
+            const gradeUrls = {
+                9: 'G9/index.html',
+                10: 'G10/index.html',
+                11: 'G11/index.html'
+            };
+            
+            // Check if grade exists
+            if (gradeUrls[grade]) {
+                console.log(`Navigating to Grade ${grade}...`);
+                
+                // Show loading message
+                const loadingMsg = document.createElement('div');
+                loadingMsg.innerHTML = `
+                    <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                                background: rgba(0,0,0,0.8); color: white; padding: 20px; 
+                                border-radius: 10px; z-index: 9999;">
+                        <div style="text-align: center;">
+                            <div style="border: 4px solid #f3f3f3; border-top: 4px solid #3498db; 
+                                        border-radius: 50%; width: 40px; height: 40px; 
+                                        animation: spin 1s linear infinite; margin: 0 auto 10px;"></div>
+                            <p>Loading Grade ${grade} Timetable...</p>
+                        </div>
+                    </div>
+                    <style>
+                        @keyframes spin {
+                            0% { transform: rotate(0deg); }
+                            100% { transform: rotate(360deg); }
+                        }
+                    </style>
+                `;
+                document.body.appendChild(loadingMsg);
+                
+                // Auto redirect after 1 second
+                setTimeout(() => {
                     window.location.href = gradeUrls[grade];
-                } else {
-                    throw new Error('Page not found');
-                }
-            })
-            .catch(error => {
-                alert(`Error: Grade ${grade} page not found!`);
-                console.error('Navigation error:', error);
-            });
-    } else {
-        alert(`Grade ${grade} is not available!`);
-    }
-}
-
-        // Check for saved dark mode preference
-        if (localStorage.getItem('darkMode') === 'enabled') {
-            document.body.classList.add('dark-mode');
-            document.querySelector('.toggle-btn').innerHTML = '☀️ Light Mode';
+                }, 1000);
+                
+            } else {
+                // Error handling for invalid grade
+                alert(`Grade ${grade} not found! Available grades: 9, 10, 11`);
+                console.error(`Invalid grade: ${grade}`);
+            }
         }
 
+        // Check for saved dark mode preference (removed localStorage usage)
         // Add entrance animations
         window.addEventListener('load', () => {
             const gradeButtons = document.querySelectorAll('.grade-btn');
             const welcomeSection = document.querySelector('.welcome-section');
+            const creditsSection = document.querySelector('.credits-section');
             
             welcomeSection.style.opacity = '0';
             welcomeSection.style.transform = 'translateY(-20px)';
@@ -481,10 +694,20 @@ function navigateToGradeWithErrorHandling(grade) {
                     btn.style.transform = 'translateY(0)';
                 }, 400 + (index * 150));
             });
+
+            // Animate credits section
+            creditsSection.style.opacity = '0';
+            creditsSection.style.transform = 'translateY(30px)';
+            
+            setTimeout(() => {
+                creditsSection.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                creditsSection.style.opacity = '1';
+                creditsSection.style.transform = 'translateY(0)';
+            }, 1000);
         });
 
         // Add click ripple effect
-        document.querySelectorAll('.grade-btn').forEach(btn => {
+        document.querySelectorAll('.grade-btn, .person-card').forEach(btn => {
             btn.addEventListener('click', function(e) {
                 const ripple = document.createElement('span');
                 const rect = this.getBoundingClientRect();
@@ -509,18 +732,6 @@ function navigateToGradeWithErrorHandling(grade) {
                 }, 600);
             });
         });
-
-        // Add CSS for ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(2);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
     </script>
 </body>
 </html>
