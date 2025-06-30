@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily TimeTables Mahinda College</title>
+    <title>DTMC</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -96,6 +96,40 @@
             font-size: 24px;
             font-weight: 600;
             color: inherit;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .updates-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            background: rgba(255, 204, 0, 0.8);
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+        }
+
+        .dark-mode .updates-btn {
+            background: rgba(255, 204, 0, 0.9);
+            color: #000;
+        }
+
+        .updates-btn:hover {
+            background: var(--accent-color);
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 204, 0, 0.4);
         }
 
         .toggle-btn {
@@ -408,6 +442,15 @@
                 font-size: 18px;
             }
 
+            .nav-buttons {
+                gap: 10px;
+            }
+
+            .updates-btn {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+
             .grade-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
@@ -448,6 +491,16 @@
         }
 
         @media (max-width: 480px) {
+            .nav-buttons {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .updates-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+
             .toggle-btn {
                 padding: 8px 15px;
                 font-size: 14px;
@@ -488,7 +541,12 @@
                 <div class="logo">🎓</div>
                 <h1 class="site-title">DTMC</h1>
             </div>
-            <button class="toggle-btn" onclick="toggleDarkMode()">🌙 </button>
+            <div class="nav-buttons">
+                <a href="update.html" class="updates-btn">
+                    📢 Updates
+                </a>
+                <button class="toggle-btn" onclick="toggleDarkMode()">🌙 </button>
+            </div>
         </div>
     </nav>
 
