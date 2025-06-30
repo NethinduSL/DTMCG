@@ -31,6 +31,7 @@ body {
 .dark-mode {
     background: var(--bg-dark) no-repeat center center fixed;
     background-color: var(--bg-color-dark);
+    background-size: contain;
     color: var(--text-dark);
 }
 
