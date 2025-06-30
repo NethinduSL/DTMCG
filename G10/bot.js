@@ -78,7 +78,7 @@ const teachers = {
   LAB1: { name: "Lab1", subjects: "Science Practical", img: "Image/LAB1.JPG" },
   TUTS: { name: "H. L. D. P. Champika", subjects: "Tutorial Sciences", img: "Image/TUTS.JPG" },
   TUTH: { name: "M. V. H. D. Gunasekara", subjects: "Tutriols History", img: "Image/TUTH.JPG" },
-  TUSI: { name: "S. T. Indrani", subjects: "Tutorials Sinhala", img: "Image/TUSI.JPG" }
+  TUSI: { name: "S. T. Indrani", subjects: "Tutorials Sinhala", img: "Image/TUSI.JPG" },
   LIOB: { name: "MRS. Library", subjects: "Library", img: "Image/LIOB.JPG" }
 
 };
