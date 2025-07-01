@@ -43,7 +43,7 @@ const teachers = {
   // Mathematics
   MKRC: { name: "M. K. Rasika Nishantha", subjects: "Mathematics", img: "Image/MKRC.PNG" },
   HKAU: { name: "H. K. A. Udayangi", subjects: "Mathematics", img: "Image/HKAU.PNG" },
-  THDC: { name: "T. H. D. Chathulakkana", subjects: "Mathematics", img: "Image/GHDC.PNG" },
+  GHDC: { name: "T. H. D. Chathulakkana", subjects: "Mathematics", img: "Image/GHDC.PNG" },
   BPLA: { name: "B. P. Lamahewa", subjects: "Mathematics", img: "Image/BPLA.png" },
   BDSE: { name: "B. D. Senanayeka", subjects: "Mathematics", img: "Image/BDSE.PNG" },
   GISA: { name: "G. Iresha Sanjeewani", subjects: "Mathematics", img: "Image/GISA.PNG" },
