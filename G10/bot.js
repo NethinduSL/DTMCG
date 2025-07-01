@@ -35,6 +35,7 @@ const teachers = {
   SMYD: { name: "S. M. Y. Darshana", subjects: "English", img: "Image/SMYD.JPG" },
   HRNG: { name: "H.R.N. Gayantha", subjects: "English", img: "Image/HRNG.JPG" },
   KSJM: { name: "K.S.J. Mendis", subjects: "English", img: "Image/KSJM.JPG" },
+  NS: { name: "N.Siriwardhana", subjects: "English", img: "Image/NS.JPG" },
 
   // Mathematics
   MKRC: { name: "M. K. Rasika Nishantha", subjects: "Mathematics", img: "Image/MKRC.JPG" },
