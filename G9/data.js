@@ -87,271 +87,272 @@ const teacherDataByDay = {
             period4: "SMYD",  // SING
             period5: null,    // INTERVAL
             period6: "UGRD",   // OPT2
-            period7: "",   // OPT2
-            period8: "",  // Eng
-            period9: ""   // TUTS
+            period7: "MWCH",   // OPT2
+            period8: "MG",  // Eng
+            period9: "KSRI"   // TUTS
         },
         classC: {
-            period1: "",  // Hist
-            period2: "",  // LIBR
-            period3: "",  // MATH
-            period4: "",  // Eng
+            period1: "GHDC",  // Hist
+            period2: "HMCN",  // LIBR
+            period3: "UGRD",  // MATH
+            period4: "UGRD",  // Eng
             period5: null,    // INTERVAL
-            period6: "",  // OPT2
-            period7: "", // OPT2
-            period8: "", // SCI
-            period9: ""  // Eng
+            period6: "JHG",  // OPT2
+            period7: "SMYD", // OPT2
+            period8: "WAGN", // SCI
+            period9: "WN"  // Eng
         },
         classD: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "WMST",    // Eng
+            period2: "KSRI",  // MATH
+            period3: "AATA",  // Budh
+            period4: "PGPW", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "HPAT",  // SCI
+            period7: "SPUM",  // Hist
+            period8: "KGSD",  // SING
+            period9: "KGSD"    // Eng
         },
         classE: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "UGWA",    // Eng
+            period2: "ADGU",  // MATH
+            period3: "HGAH",  // Budh
+            period4: "WTKK", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "GISA",  // SCI
+            period7: "GISA",  // Hist
+            period8: "KLWA",  // SING
+            period9: "STIN"    // Eng
         },
     
         classF: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "KSJM",    // Eng
+            period2: "SMMM",  // MATH
+            period3: "KSRI",  // Budh
+            period4: "WN", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "MVHD",  // SCI
+            period7: "IAGA",  // Hist
+            period8: "SHPH",  // SING
+            period9: "MWCH"    // Eng
         }
     },
     Wednesday: {
         classA: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "HKAU",    // Eng
+            period2: "DOLU",  // MATH
+            period3: "WHG",  // Budh
+            period4: "WHG", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "EMDD",  // SCI
+            period7: "MWCH",  // Hist
+            period8: "JHG",  // SING
+            period9: "AES"    // Eng
         },
    
         classB: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "PMNS",    // Eng
+            period2: "WN",  // MATH
+            period3: "SMYD",  // Budh
+            period4: "HKD", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "MKRC",  // SCI
+            period7: "MKRC",  // Hist
+            period8: "MG",  // SING
+            period9: "AES"    // Eng
         },
    
         classC: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "WAGN",    // Eng
+            period2: "SMYD",  // MATH
+            period3: "HMCN",  // Budh
+            period4: "GHDC", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "APA",  // SCI
+            period7: "JHG",  // Hist
+            period8: "MWCH",  // SING
+            period9: "AES"    // Eng
         },
 
         classD: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "SPUM",    // Eng
+            period2: "KGSD",  // MATH
+            period3: "HPAT",  // Budh
+            period4: "VH", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "AES",  // SCI
+            period7: "KHNL",  // Hist
+            period8: "AATA",  // SING
+            period9: "PGPW"    // Eng
         },
 
         classE: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "PGPW",    // Eng
+            period2: "GISA",  // MATH
+            period3: "STIN",  // Budh
+            period4: "ADGU", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "AES",  // SCI
+            period7: "UGWA",  // Hist
+            period8: "ADGU",  // SING
+            period9: "EMDD"    // Eng
         },
 
         classF: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "SHPH",    // Eng
+            period2: "KSJM",  // MATH
+            period3: "SMMMM",  // Budh
+            period4: "ASMA", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "AES",  // SCI
+            period7: "EMDD",  // Hist
+            period8: "KSRI",  // SING
+            period9: "IAGA"    // Eng
         },
 
     Thursday: {
         classA: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "WTKK",    // Eng
+            period2: "WTKK",  // MATH
+            period3: "MWCH",  // Budh
+            period4: "JHG", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "HKAU",  // SCI
+            period7: "DOLU",  // Hist
+            period8: "WHG",  // SING
+            period9: "WAGN"    // Eng
         },
   
         classB: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "ASMA",    // Eng
+            period2: "MKRC",  // MATH
+            period3: "SMYD",  // Budh
+            period4: "MWCH", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "HLDP",  // SCI
+            period7: "HLDP",  // Hist
+            period8: "ASMA",  // SING
+            period9: "HKD"    // Eng
         },
        
         classC: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "HMCN",    // Eng
+            period2: "JHG",  // MATH
+            period3: "ASMA",  // Budh
+            period4: "SMYD", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "GHDC",  // SCI
+            period7: "GHDC",  // Hist
+            period8: "APA",  // SING
+            period9: "EMDD"    // Eng
+                
         },
  
         classD: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "WMST",    // Eng
+            period2: "SPUM",  // MATH
+            period3: "KSRI",  // Budh
+            period4: "PGPW", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "AATA",  // SCI
+            period7: "AATA",  // Hist
+            period8: "WN",  // SING
+            period9: "HPAT"    // Eng
         },
   
         classE: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "PGPW",    // Eng
+            period2: "GISA",  // MATH
+            period3: "PGPW",  // Budh
+            period4: "STIN", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "KLWA",  // SCI
+            period7: "UGWA",  // Hist
+            period8: "WTKK",  // SING
+            period9: "WTKK"    // Eng
         },
 
         classF: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "SHPH",    // Eng
+            period2: "KSJM",  // MATH
+            period3: "IAGA",  // Budh
+            period4: "IAGA", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "YMS",  // SCI
+            period7: "SMMM",  // Hist
+            period8: "SMMM",  // SING
+            period9: "MVHD"    // Eng
   
         }
     },
     Friday: {
         classA: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "MVHD",    // Eng
+            period2: "DOLU",  // MATH
+            period3: "HKAU",  // Budh
+            period4: "ASMA", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "HKAU",  // SCI
+            period7: "UGRD",  // Hist
+            period8: "KLWA",  // SING
+            period9: "JHG"    // Eng
         },
     
         classB: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "ASMA",    // Eng
+            period2: "MG",  // MATH
+            period3: "KSRI",  // Budh
+            period4: "HKD", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "PMNS",  // SCI
+            period7: "PMNS",  // Hist
+            period8: "SMYD",  // SING
+            period9: "MKRC"    // Eng
         },
   
         classC: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "UGRD",    // Eng
+            period2: "JHG",  // MATH
+            period3: "GHDC",  // Budh
+            period4: "SMYD", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "HMCN",  // SCI
+            period7: "HMCN",  // Hist
+            period8: "MWCH",  // SING
+            period9: "WN"    // Eng
         },
         classD: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "PGPW",    // Eng
+            period2: "SPUM",  // MATH
+            period3: "AATA",  // Budh
+            period4: "HPAT", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "WMST",  // SCI
+            period7: "WMST",  // Hist
+            period8: "AES",  // SING
+            period9: "AES"    // Eng
         },
         classE: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "UGWA",    // Eng
+            period2: "STIN",  // MATH
+            period3: "HGAH",  // Budh
+            period4: "WAGN", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "GISA",  // SCI
+            period7: "ADGU",  // Hist
+            period8: "AES",  // SING
+            period9: "AES"    // Eng
         },
         classF: {
-            period1: "",    // Eng
-            period2: "",  // MATH
-            period3: "",  // Budh
-            period4: "", // SING
+            period1: "SHPH",    // Eng
+            period2: "SMMM",  // MATH
+            period3: "KSJM",  // Budh
+            period4: "IAGA", // SING
             period5: null,    // INTERVAL
-            period6: "",  // SCI
-            period7: "",  // Hist
-            period8: "",  // SING
-            period9: ""    // Eng
+            period6: "UGRD",  // SCI
+            period7: "MWCH",  // Hist
+            period8: "AES",  // SING
+            period9: "AES"    // Eng
         }
     }
 };
