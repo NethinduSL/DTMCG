@@ -34,6 +34,7 @@ const teachers = {
   SDJP: { name: "S. D. R. J. P. Samarakoon", subjects: "English", img: "Image/SDJP.JPG" },
   SMYD: { name: "S. M. Y. Darshana", subjects: "English", img: "Image/SMYD.JPG" },
   HRNG: { name: "H.R.N. Gayantha", subjects: "English", img: "Image/HRNG.JPG" },
+  KSJM: { name: "K.S.J. Mendis", subjects: "English", img: "Image/KSJM.JPG" },
 
   // Mathematics
   MKRC: { name: "M. K. Rasika Nishantha", subjects: "Mathematics", img: "Image/MKRC.JPG" },
@@ -49,7 +50,7 @@ const teachers = {
   KSRI: { name: "K. Sirisumana", subjects: "Buddhism, Buddhism Tutorial Sciences", img: "Image/KSRI.png" },
   MACH: { name: "Makumbura Chandraloka", subjects: "Buddhism", img: "Image/MACH.png" },
   DGSR: { name: "D. G. S. R. Dodangoda", subjects: "Buddhism, Science Practical", img: "Image/DGSR.JPG" },
-
+  RPKU: { name: "R.P. Kusumalatha", subjects: "Buddhism", img: "Image/RPKU.png" },
   // Science
   SCI: { name: "D. G. S. R. Dodangoda", subjects: "Science", img: "Image/SCI.JPG" },
   NPAM: { name: "N. P. Amila Chaturika", subjects: "Science", img: "Image/NPAM.png" },
